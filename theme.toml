@@ -1,15 +1,15 @@
-name = "hyde"
-description = "A classic blog theme"
-license = "MIT"
-homepage = "https://github.com/getzola/hyde"
-min_version = "0.11.0"
-demo = "https://zola-hyde.netlify.com"
+name = "mensch"
+description = "A blog theme for humans"
+license = "Unlicense"
+homepage = "https://github.com/wilsonjholmes/mensch"
+min_version = "0.15.2"
+demo = "example.com"
 
 [extra]
-hyde_sticky = true
-hyde_reverse = false
-hyde_theme = ""
-hyde_links = [
+mensch_sticky = true
+mensch_reverse = false
+mensch_theme = ""
+mensch_links = [
 ]
 
 [author]
@@ -17,6 +17,6 @@ name = "Vincent Prouillet"
 homepage = "https://www.vincentprouillet.com"
 
 [original]
-author =  "mdo"
-homepage = "http://markdotto.com/"
-repo = "https://www.github.com/mdo/hyde"
+author =  "Wilson J. Holmes"
+homepage = "http://wilsonjholmes.xyz"
+repo = "https://www.github.com/wilsonjholmes/mensch"
