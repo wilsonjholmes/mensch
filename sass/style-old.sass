@@ -1,0 +1,62 @@
+@import "colors"
+	
+.feather
+  width: 24px
+  height: 24px
+  stroke: currentColor
+  stroke-width: 2
+  stroke-linecap: round
+  stroke-linejoin: round
+  fill: none
+
+html
+  font-size: 100%
+  overflow-y: scroll
+  -webkit-text-size-adjust: 100%
+  -ms-text-size-adjust: 100%
+  scroll-behavior: smooth
+
+body
+	color: var(--fg)
+	font-family: 'Inter400', sans-serif
+	font-size: 12px
+	padding: 1em
+	margin: auto
+	max-width: 45em
+	background: var(--bg)
+
+nav ul
+	margin: 0
+	padding: 0
+	list-style-type: none
+	overflow: hidden
+
+nav ul li
+	/* This allow us to arrange list items in a row, without using float */
+	display: inline-block
+	list-style-type: none;
+
+/* Create a style for the first level items */
+
+nav>div>ul>li>a
+	color: var(--fg) !important;
+	display: block;
+	line-height: 2em;
+	padding: 0.5em 0em;
+	text-decoration: none;
+	position: relative;
+
+nav>div.nav-right>ul>li>a
+	padding: 0.5em 0.5em;
+
+nav>div>ul>li>a:hover
+	color: var(--link_h) !important;
+
+.nav-left
+	float: left;
+
+.nav-left ul li
+	float: left;
+
+.nav-right ul li
+	float: right;

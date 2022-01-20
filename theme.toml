@@ -1,22 +1,27 @@
 name = "mensch"
-description = "A blog theme for humans"
-license = "Unlicense"
-homepage = "https://github.com/wilsonjholmes/mensch"
+description = "Zola theme designed for humans."
+license = "UNLICENSE"
+homepage ="https://github.com/wilsonjholmes/mensch"
+# The minimum version of Zola required
 min_version = "0.15.2"
-demo = "example.com"
+# An optional live demo URL
+demo = "https://wilsonjholmes.github.io/mensch/"
 
+# Any variable there can be overridden in the end user `config.toml`
+# You don't need to prefix variables by the theme name but as this will
+# be merged with user data, some kind of prefix or nesting is preferable
+# Use snake_casing to be consistent with the rest of Zola
 [extra]
-mensch_sticky = true
-mensch_reverse = false
-mensch_theme = ""
+mensch_color_theme = "" # gruvbox or solarized
 mensch_links = [
 ]
+mensch_site_source = ""
 
+
+
+# The theme author info: you!
 [author]
-name = "Vincent Prouillet"
-homepage = "https://www.vincentprouillet.com"
+name = "Wilson J Holmes"
+homepage = "https://wilsonjholmes.xyz"
 
-[original]
-author =  "Wilson J. Holmes"
-homepage = "http://wilsonjholmes.xyz"
-repo = "https://www.github.com/wilsonjholmes/mensch"
+
