@@ -1,5 +1,14 @@
 @import "colors"
-	
+@import "fonts/inter/inter-web/inter.css"
+@font-face
+  font-family: 'Ubuntu Mono'
+  src: url("fonts/ubuntu-mono/UbuntuMono-Regular.ttf")
+  font-display: swap
+
+$font-sans: "Inter", sans-serif
+$font-mono:  "Ubuntu Mono", monospace
+$padding: 8px
+
 .feather
   width: 24px
   height: 24px
@@ -9,27 +18,97 @@
   stroke-linejoin: round
   fill: none
 
+// Set the font globally
 html
   font-size: 100%
   overflow-y: scroll
   -webkit-text-size-adjust: 100%
   -ms-text-size-adjust: 100%
+  font-family: $font-sans
   scroll-behavior: smooth
 
 body
-	color: var(--fg)
-	font-family: 'Inter400', sans-serif
-	font-size: 12px
-	padding: 1em
-	margin: auto
-	max-width: 45em
-	background: var(--bg)
+  //font-size: 12px
+  padding: 1em
+  margin: auto
+  max-width: 45em
+  font: 100%
+  color: $gb-dm-fg1
+  background: $gb-dm-bg0
+  font-size: 1.15rem
+  line-height: 1.5
+  display: grid
+
+body
+  grid-template-columns: auto
+  grid-template-areas: "header" "main" "footer"
+
+
+header
+  padding: $padding $padding 0 $padding
+
+  grid-area: header
+
+  display: flex
+  justify-content: space-between
+  align-items: center
+
+.logo
+  height: 32px
+
+.sitename
+  position: relative
+  top: -8px
+  font-size: 1.8em
+  font-weight: bold
+  color: $gb-dm-fg1
+
+a.sitename:hover
+	color: $gb-dm-dark-blue
+	text-decoration: underline
+
+.menu
+	border-bottom: 2px solid $gb-dm-dark-blue
+
+.title
+  color: $gb-dm-dark-green
+
+@mixin subheadings
+  h1, h2, h3, h4, h5, h6
+    @content
+  
+@include subheadings
+  color: $gb-dm-light-yellow
+
+main
+  padding: $padding
+  grid-area: main
+
+p
+  text-align: justify
+
+footer
+  color: $gb-dm-fg2
+  padding: 0 $padding $padding $padding
+
+  grid-area: footer
+
+.footer
+  display: flex
+  justify-content: space-between
+  align-items: center
+
+nav
+  list-style-type: none
+
+.nav
+  display: inline
 
 nav ul
-	margin: 0
-	padding: 0
-	list-style-type: none
-	overflow: hidden
+  margin: 0
+  padding: 0
+  list-style-type: none
+  overflow: hidden
 
 nav ul li
 	/* This allow us to arrange list items in a row, without using float */
@@ -39,24 +118,162 @@ nav ul li
 /* Create a style for the first level items */
 
 nav>div>ul>li>a
-	color: var(--fg) !important;
-	display: block;
-	line-height: 2em;
-	padding: 0.5em 0em;
-	text-decoration: none;
-	position: relative;
-
-nav>div.nav-right>ul>li>a
-	padding: 0.5em 0.5em;
-
-nav>div>ul>li>a:hover
-	color: var(--link_h) !important;
+	color: $gb-dm-fg1 !important
+	display: block
+	line-height: 0em
+	padding: 0em 0.2em
+	text-decoration: none
+	position: relative
 
 .nav-left
-	float: left;
+	float: left
 
-.nav-left ul li
-	float: left;
+.nav-right
+	float: right
 
-.nav-right ul li
-	float: right;
+ul
+  list-style: none inside none
+  list-style-type: "•"
+  padding: 0
+
+li::marker
+  color: $gb-dm-light-yellow
+
+ul ul
+  padding-left: 1em
+
+a:not(.logo)
+  font-size: none
+  color: $gb-dm-light-blue
+  text-decoration: none
+
+h1
+  color: $gb-dm-dark-red
+  font-size: 3rem;
+  margin: 5px 0
+  font-weight: bold
+
+h2
+  color: $gb-dm-dark-green
+  font-size: 2.6rem;
+  margin-top: 3rem;
+  font-weight: bold
+  display: flex
+  align-items: flex-start
+  text-align: left
+  &:after
+    content: ''
+    flex-grow: 1
+    height: 2px
+    background: $gb-dm-dark-green
+    min-width: 20px
+    margin: auto
+    margin-left: 20px
+
+h3
+  color: $gb-dm-dark-blue
+  font-size: 20px
+  font-weight: bold
+  display: flex
+  align-items: flex-start
+  text-align: left
+  &:after
+    content: ''
+    flex-grow: 1
+    height: 2px
+    background: $gb-dm-dark-blue
+    min-width: 20px
+    margin: auto
+    margin-left: 20px
+
+h4
+  color: $gb-dm-dark-yellow
+  font-size: 18px
+  font-weight: bold
+  display: flex
+  align-items: flex-start
+  text-align: left
+  &:after
+    content: ''
+    flex-grow: 1
+    height: 2px
+    background: $gb-dm-dark-yellow
+    min-width: 20px
+    margin: auto
+    margin-left: 20px
+
+h5
+  color: $gb-dm-dark-gray
+  font-size: 16px
+  font-weight: bold
+
+h6
+  color: $gb-dm-dark-gray
+  font-size: 14px
+  font-weight: bold
+
+pre
+  padding: 1em
+  margin: 1em
+  overflow-x: auto
+
+code
+  font: 16px //$font-mono
+
+p > code
+  font-weight: bold
+  color: $gb-dm-fg0
+
+.date
+  color: $gb-dm-dark-gray
+  font-size: 14px
+
+.border
+  color: $gb-dm-light-gray
+  margin: 8px 0 8px 0
+  border-top: 2px dashed
+
+.notfound
+  text-align: center
+
+.icon
+  display: inline-block
+  vertical-align: middle
+  width: 16px
+  height: 16px
+
+.content
+  margin: 0 auto
+  width: 860px
+
+@media (max-width: 1200px)
+  .content
+    margin-left: 1em
+    margin-right: 1em
+    width: auto
+    max-width: 1200px
+    min-width: 200px
+    
+img
+  max-width: 100%
+
+a
+  color: $gb-dm-dark-green
+  &:visited
+	  color: $gb-dm-dark-purple
+  &:hover 
+	  color: $gb-dm-dark-aqua !important
+	  cursor: pointer
+	  text-decoration: underline
+
+svg
+  &:hover 
+    color: $gb-dm-dark-aqua
+    cursor: pointer
+    text-decoration: underline
+
+footer
+	font-size: 12px
+
+.foot
+	border-top: 2px solid $gb-dm-dark-blue

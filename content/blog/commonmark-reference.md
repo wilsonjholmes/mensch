@@ -38,6 +38,7 @@ _This is italic text_
 
 > Blockquotes can also be nested...
 >> ...by using additional greater-than signs right next to each other...
+>> <cite>– random person</cite>
 > > > ...or with spaces between arrows.
 
 
@@ -77,6 +78,8 @@ Indented code
     line 1 of code
     line 2 of code
     line 3 of code
+
+<kbd>CTRL</kbd>+<kbd>ALT</kbd>+<kbd>T</kbd>
 
 
 Block code "fences"
