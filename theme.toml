@@ -7,11 +7,12 @@ min_version = "0.15.2"
 # An optional live demo URL
 demo = "https://wilsonjholmes.github.io/mensch/"
 
+
 [markdown]
 render_emoji = true
 
+highlight_code = true
 highlight_theme = "css"
-
 highlight_themes_css = [
   { theme = "gruvbox-dark", filename = "syntax-theme-dark.css" },
   { theme = "gruvbox-light", filename = "syntax-theme-light.css" },
@@ -26,6 +27,11 @@ mensch_color_theme = "" # gruvbox or solarized
 mensch_links = [
 ]
 mensch_site_source = ""
+
+mensch_show_word_count = true
+mensch_show_reading_time = true
+
+mensch_date_format = "%a %b %e, %Y"
 
 
 
