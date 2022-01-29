@@ -1,7 +1,5 @@
 # On every push this script is executed
 on: push
-env:
-  TOKEN: ${{secrets.GITHUB_TOKEN}}
 name: Build and deploy GH Pages
 jobs:
   build:
@@ -16,4 +14,4 @@ jobs:
           # Target branch
           PAGES_BRANCH: main
           # Provide personal access token
-          TOKEN: ${{ secrets.TOKEN }}
+          TOKEN: ${{secrets.GITHUB_TOKEN}}
